@@ -79,7 +79,8 @@ router.put("/update-issue/:id", async (req, res) => {
             name: req.body.name,
             description: req.body.description
         }
-    });
+    },
+    {useFindAndModify: false});
     await issue.save();
 
     res.send(issue);

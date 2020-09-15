@@ -16,7 +16,7 @@ export default class IssueList extends Component {
 
   componentDidMount = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/list-issue?page=1");
+      const res = await axios.get("/api/list-issue?page=1");
       console.log(res.data);
       this.setState({
         issues: res.data,

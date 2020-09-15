@@ -42,7 +42,7 @@ export default class AddIssue extends Component {
 
       const body = JSON.stringify(user);
 
-      const res = await axios.post("http://localhost:5000/api/add-issue", body, config);
+      const res = await axios.post("/api/add-issue", body, config);
       console.log(res.data);
       this.props.history.push("/");
     } catch (err) {

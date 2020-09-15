@@ -31,7 +31,8 @@ export default class EditIssue extends Component {
         },
       };
       const res = await axios.put(`/api/update-issue/${id}`, user, config);
-      alert("Issue updated.")
+      console.log(res.data);
+      alert("Issue update Successfully.")
       this.props.history.push("/");
     } catch (err) {
       alert(err.message);
